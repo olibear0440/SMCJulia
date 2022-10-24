@@ -14,7 +14,9 @@
     </div>
     <div class="thiStep">
       <h2>Etape 3</h2>
-      <p class="mainTxt">Recevez simplement votre chèque issu de la vente de vos vetements !</p>
+      <p class="mainTxt">
+        Recevez simplement votre chèque issu de la vente de vos vetements !
+      </p>
       <p class="secTxt">La règle est simple, c'est moitié-moitié !</p>
     </div>
   </div>
@@ -32,49 +34,50 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .secondPage {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 30px;
 }
 .firStep,
 .secStep,
 .thiStep {
   width: 90%;
-  height: 25%;
+  height: 210px;
   margin-bottom: 10px;
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(255, 255, 255, 0.8);
-  
 }
 .firStep {
   margin-top: 5px;
 }
-h2{
-    font-family: "TheLastDay";
-    color: rgb(202, 99, 68);
-    font-size: 40px;
-    font-weight: lighter;
-    margin-bottom: 15px;
+h2 {
+  font-family: "TheLastDay";
+  color: rgb(202, 99, 68);
+  font-size: 40px;
+  font-weight: lighter;
+  margin-bottom: 15px;
 }
-.mainTxt{
-    color: rgb(152, 50, 48);
-    font-size: 25px;
-    font-family: "SignPaint";
-    font-weight: lighter;
-    margin-bottom: 5px;
+.mainTxt {
+  color: rgb(152, 50, 48);
+  font-size: 25px;
+  font-family: "SignPaint";
+  font-weight: lighter;
+  margin-bottom: 10px;
 }
-.secTxt{
-    color: rgb(152, 50, 48, 0.7);
-    font-size: 25px;
-    font-family: "SignPaint";
-    font-weight: lighter;
-    text-align: end;
+.secTxt {
+  color: rgb(152, 50, 48, 0.7);
+  font-size: 25px;
+  font-family: "SignPaint";
+  font-weight: lighter;
+  text-align: end;
+  //width: 80%;
 }
 </style>

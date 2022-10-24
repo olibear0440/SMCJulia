@@ -6,7 +6,9 @@
     <div class="mainImg">
       <img class="logoImg" :src="logo" alt="logo-smc" />
     </div>
-    <div class="mainBtn"><a href="#etapeUn" class="mainBtnTitle">CONCEPT</a></div>
+    <div class="mainBtn">
+      <a href="#etapeUn" class="mainBtnTitle">CONCEPT</a>
+    </div>
   </div>
 </template>
 
@@ -74,19 +76,14 @@ export default {
   transform: translate(-50%, 50%);
 }
 .mainBtn {
-  //position: absolute;
-  //top: 85%;
-  //left: 50%;
-  //transform: translate(-50%, -50%);
-  
   font-family: "SignPainter";
   padding: 6px 22px;
   border: 2px solid rgb(152, 50, 48);
   cursor: pointer;
-  
+  border-radius: 2px;
 }
-.mainBtnTitle{
-  color: rgb(152, 50, 48);
+.mainBtnTitle {
+  color: rgb(202, 99, 68);
   font-size: 2.1em;
 }
 </style>

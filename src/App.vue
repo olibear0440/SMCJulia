@@ -3,45 +3,47 @@
     <Navbar />
     <Accueil />
     <Concept />
-
+    <Histoire />
+    <Informations />
   </div>
   <!--<img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>-->
-  
 </template>
 
 <script>
-
-import Accueil from './components/Accueil.vue'
-import Navbar from './components/Navbar.vue'
-import Concept from './components/Concept.vue'
+import Accueil from "./components/Accueil.vue";
+import Navbar from "./components/Navbar.vue";
+import Concept from "./components/Concept.vue";
+import Histoire from "./components/Histoire.vue";
+import Informations from "./components/Informations.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     Accueil,
     Navbar,
     Concept,
-  }
-}
+    Histoire,
+    Informations,
+  },
+};
 </script>
 
 <style lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.mainWrapper{
+.mainWrapper {
   background-color: rgb(238, 235, 235);
   height: auto;
   width: 100%;
 }
-ul{
+ul {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
 }
-
 </style>

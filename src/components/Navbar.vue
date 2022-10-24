@@ -2,10 +2,12 @@
   <div class="nav-bar">
     <nav class="nav">
       <div class="navLogo">
-      <h2>Julia PAPILLON</h2>
-      <p>PERSONAL SELLER</p>
-    </div>
-      <a href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y=" class="smcInsta"
+        <h2>Julia PAPILLON</h2>
+        <p>PERSONAL SELLER</p>
+      </div>
+      <a
+        href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y="
+        class="smcInsta"
         ><span class="fa fa-instagram fa-2x" aria-hidden="true"></span
       ></a>
       <!--<a href="#" class="smcMail"
@@ -13,10 +15,14 @@
       ></a>-->
       <div class="nav-menu" :class="isShow ? 'show' : ''">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#etapeUn" class="nav-link">Concept</a></li>
-          <li class="nav-item"><a href="#histoire" class="nav-link">Histoire</a></li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Informations</a>
+            <a href="#etapeUn" class="nav-link">Concept</a>
+          </li>
+          <li class="nav-item">
+            <a href="#histoire" class="nav-link">Histoire</a>
+          </li>
+          <li class="nav-item">
+            <a href="#informations" class="nav-link">Informations</a>
           </li>
         </ul>
         <span
@@ -52,13 +58,12 @@ export default {
   bottom: 0;
   left: 0;
   z-index: 1;
-  //background-color: rgb(242, 233, 228);
   background-color: black;
   color: rgb(202, 99, 68);
 }
 .nav {
   max-width: 1024px;
-  height: 3rem;
+  height: 3.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
