@@ -13,8 +13,8 @@
       ></a>-->
       <div class="nav-menu" :class="isShow ? 'show' : ''">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#" class="nav-link">Concept</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Histoire</a></li>
+          <li class="nav-item"><a href="#etapeUn" class="nav-link">Concept</a></li>
+          <li class="nav-item"><a href="#histoire" class="nav-link">Histoire</a></li>
           <li class="nav-item">
             <a href="#" class="nav-link">Informations</a>
           </li>
