@@ -1,5 +1,10 @@
 @font-face {
-    font-family: "TheLastDay";
-    src: url(../font/TheLastDay.ttf) format("truetype");
-    font-display: swap;
-  }
+  font-family: "TheLastDay";
+  src: url(../font/TheLastDay.ttf) format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "SignPaint";
+  src: url(../font/SignPainterHouseScript.ttf) format("truetype");
+  font-display: swap;
+}

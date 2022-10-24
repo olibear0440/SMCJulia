@@ -1,6 +1,16 @@
 <template>
   <div class="nav-bar">
     <nav class="nav">
+      <div class="navLogo">
+      <h2>Julia PAPILLON</h2>
+      <p>PERSONAL SELLER</p>
+    </div>
+      <a href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y=" class="smcInsta"
+        ><span class="fa fa-instagram fa-2x" aria-hidden="true"></span
+      ></a>
+      <!--<a href="#" class="smcMail"
+        ><span class="fa fa-envelope-o fa-2x" aria-hidden="true"></span
+      ></a>-->
       <div class="nav-menu" :class="isShow ? 'show' : ''">
         <ul class="nav-list">
           <li class="nav-item"><a href="#" class="nav-link">Concept</a></li>
@@ -41,28 +51,58 @@ export default {
   width: 100%;
   bottom: 0;
   left: 0;
-  //background-color: black;
-  /*background-color: rgb(242, 233, 228);
-  color: rgb(202, 99, 68);*/
+  z-index: 1;
+  //background-color: rgb(242, 233, 228);
+  background-color: black;
+  color: rgb(202, 99, 68);
 }
 .nav {
   max-width: 1024px;
   height: 3rem;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
+  margin-left: 1.2rem;
+  margin-right: 1.5rem;
+}
+.navLogo {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: baseline;
+}
+h2 {
+  color: white;
+  font-family: "SignPaint";
+  font-weight: lighter;
+  font-size: 20px;
+  padding: 0 5px;
+  width: 150px;
+}
+p {
+  color: white;
+  width: 150px;
+  padding: 0 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+}
+.smcInsta {
+  color: rgb(202, 99, 68);
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 50px;
 }
 .nav-menu {
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
-  border: 1px solid black;
-  padding: 3rem 0 3rem;
+  padding: 4rem 0 3rem;
   transition: 0.4s;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-menu.show {
@@ -75,28 +115,30 @@ export default {
   justify-content: space-between;
   align-items: center;
 }
-.nav-item{
+.nav-item {
   width: 100%;
   text-align: center;
   padding: 5px 0px;
   margin: 5px 0 5px 0;
 }
-.nav-link{
+.nav-link {
   width: 100%;
   padding: 5px;
   font-size: 50px;
   font-family: "TheLastDay";
-  color: rgb(202, 99, 68)
+  color: rgb(202, 99, 68);
 }
 .nav-close {
   position: absolute;
   top: 15px;
   right: 15px;
   font-size: 1.4rem;
-  //color:
+}
+.fa-bars {
+  color: rgb(202, 99, 68);
 }
 .nav-toggle {
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 768px) {

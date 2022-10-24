@@ -2,6 +2,7 @@
   <div class="mainWrapper">
     <Navbar />
     <Accueil />
+    <Concept />
 
   </div>
   <!--<img alt="Vue logo" src="./assets/logo.png">
@@ -13,12 +14,14 @@
 
 import Accueil from './components/Accueil.vue'
 import Navbar from './components/Navbar.vue'
+import Concept from './components/Concept.vue'
 
 export default {
   name: 'App',
   components: {
     Accueil,
-    Navbar
+    Navbar,
+    Concept,
   }
 }
 </script>

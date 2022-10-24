@@ -1,11 +1,12 @@
 <template>
   <div class="mainPage">
-    <!--<div class="mainImg">
-      <img class="dressingImg" :src="dressing" alt="dressing-smc" />
+    <div class="bannerBack"></div>
+    <div class="bannerFront"></div>
+    <img class="dressingImg" :src="dressing" alt="dressing-smc" />
+    <div class="mainImg">
       <img class="logoImg" :src="logo" alt="logo-smc" />
-    </div>-->
-    
-    
+    </div>
+    <div class="mainBtn"><a href="#etapeUn" class="mainBtnTitle">CONCEPT</a></div>
   </div>
 </template>
 
@@ -23,38 +24,69 @@ export default {
   },
   mounted() {
     const logoImg = document.querySelector(".logoImg");
-    gsap.to(logoImg, { y: -40, duration: 2 });
+    gsap.to(logoImg, { y: -200, duration: 1, ease: "power4.out" });
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import "../assets/font/font-family.css";
 .mainPage {
-  height: 100vh;
+  height: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.mainImg {
+.bannerBack {
+  background-color: black;
+  height: 100px;
   width: 100%;
-  height: 90%;
 }
+.bannerFront {
+  background-color: black;
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .dressingImg {
   width: 100%;
-  height: 100%;
+  height: 400px;
   position: relative;
   object-fit: cover;
+  margin-bottom: 20px;
 }
+.mainImg {
+  width: 100%;
+}
+
 .logoImg {
-  width: 35%;
+  width: 60%;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 50%);
 }
-
-
+.mainBtn {
+  //position: absolute;
+  //top: 85%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  
+  font-family: "SignPainter";
+  padding: 6px 22px;
+  border: 2px solid rgb(152, 50, 48);
+  cursor: pointer;
+  
+}
+.mainBtnTitle{
+  color: rgb(152, 50, 48);
+  font-size: 2.1em;
+}
 </style>
