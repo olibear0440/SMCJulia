@@ -1,6 +1,6 @@
 <template>
-  <div class="secondPage">
-    <div class="firStep" id="etapeUn">
+  <div class="secondPage" id="etapeUn">
+    <div class="firStep">
       <h2>Etape 1</h2>
       <p class="mainTxt">
         Je me deplace chez vous et je collecte les vetements que vous souhaitez
@@ -35,12 +35,15 @@ export default {
 <style scoped lang="scss">
 .secondPage {
   height: auto;
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 30px;
+  margin: 50px 0px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 .firStep,
 .secStep,
@@ -64,6 +67,8 @@ h2 {
   font-size: 40px;
   font-weight: lighter;
   margin-bottom: 15px;
+  width: auto;
+  height: auto;
 }
 .mainTxt {
   color: rgb(152, 50, 48);
@@ -78,6 +83,66 @@ h2 {
   font-family: "SignPaint";
   font-weight: lighter;
   text-align: end;
-  //width: 80%;
+}
+
+@media screen and (min-width: 700px) {
+  .secondPage {
+    height: 60vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 180px;
+  }
+  .firStep,
+  .secStep,
+  .thiStep {
+    width: 32%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(255, 255, 255, 0.8);
+    margin-top: 200px;
+  }
+  h2 {
+    font-size: 4em;
+    margin-bottom: 30px;
+  }
+  .mainTxt {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+  }
+  .secTxt {
+    font-size: 1.7em;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .secondPage {
+    margin-bottom: 300px;
+  }
+  .firStep,
+  .secStep,
+  .thiStep {
+    height: 600px;
+    margin-top: 250px;
+  }
+  .firStep {
+    margin-top: 0;
+    margin-top: 250px;
+  }
+  h2 {
+    font-size: 6em;
+    margin-bottom: 60px;
+  }
+  .mainTxt {
+    font-size: 3.7em;
+    margin-bottom: 40px;
+  }
+  .secTxt {
+    font-size: 3.7em;
+    width: 80%;
+  }
 }
 </style>

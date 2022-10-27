@@ -91,8 +91,7 @@ h2 {
   margin-bottom: 20px;
 }
 ul {
-  width: 100%;
-  height: 1200px;
+  height: 1170px;
   color: rgb(172, 121, 120);
   font-size: 16px;
   padding: 0 10px 0 10px;
@@ -103,5 +102,37 @@ li {
   margin-bottom: 15px;
   list-style-type: disc;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+@media screen and (min-width: 700px) {
+  h2 {
+    font-size: 3.5em;
+    margin-bottom: 40px;
+    padding-top: 150px;
+  }
+  ul {
+    margin-left: 4%;
+    margin-right: 4%;
+    height: 700px;
+  }
+  li {
+    font-size: 16px;
+    line-height: 20px;
+    overflow: auto;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  h2 {
+    font-size: 6em;
+  }
+  ul {
+    height: 1000px;
+  }
+  li {
+    font-size: 25px;
+    line-height: 35px;
+  }
 }
 </style>

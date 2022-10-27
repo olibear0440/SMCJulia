@@ -52,6 +52,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/font/font-family.css";
+
 .nav-bar {
   position: fixed;
   width: 100%;
@@ -103,7 +104,7 @@ p {
 .nav-menu {
   position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: -100%;
   left: 0;
   padding: 4rem 0 3rem;
   transition: 0.4s;
@@ -146,40 +147,54 @@ p {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    width: 100%;
-    bottom: -100%;
-    left: 0;
-    border-radius: 0.8rem 0.8rem 0 0;
-    padding: 3rem 0 3rem;
-    transition: 0.4s;
-  }
-}
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 700px) {
   .nav-bar {
     top: 0;
     bottom: initial;
   }
   .nav {
-    margin-inline: auto;
     height: 100px;
+    max-width: 100%;
+  }
+  .smcInsta,
+  .nav-toggle,
+  .nav-close {
+    display: none;
+  }
+  .navLogo {
+    height: 100%;
+    justify-content: center;
+    width: 20%;
+  }
+  h2,
+  p {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1050px) {
+    h2 {
+      font-size: 2.1em;
+    }
+    p {
+      font-size: 1em;
+    }
   }
   .nav-menu {
     top: 0;
-    height: 170px;
+    position: static;
+    bottom: initial;
+    background-color: transparent;
+    padding: 0;
+    width: 85%;
   }
   .nav-list {
-    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
-  .nav-toggle,
-  .nav-icon,
-  .nav-close {
-    display: none;
+  .nav-link {
+    font-size: 3.7em;
   }
 }
 </style>

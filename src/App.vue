@@ -5,6 +5,7 @@
     <Concept />
     <Histoire />
     <Informations />
+    <Footer />
   </div>
   <!--<img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>-->
@@ -16,6 +17,7 @@ import Navbar from "./components/Navbar.vue";
 import Concept from "./components/Concept.vue";
 import Histoire from "./components/Histoire.vue";
 import Informations from "./components/Informations.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -25,6 +27,7 @@ export default {
     Concept,
     Histoire,
     Informations,
+    Footer,
   },
 };
 </script>
@@ -35,6 +38,7 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
+
 .mainWrapper {
   background-color: rgb(238, 235, 235);
   height: auto;

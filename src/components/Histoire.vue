@@ -8,7 +8,7 @@
         class="pic"
         alt="photo de la creatrice"
       />
-      <p class="picTxt">Je suis Julia, votre personnal Seller</p>
+      <p class="picTxt">Je suis Julia, <br />votre personnal Seller !</p>
     </div>
 
     <p class="storyTxt">
@@ -66,6 +66,7 @@ hr {
   border-radius: 50%;
   float: right;
   position: relative;
+  margin-right: 10px;
 }
 h2 {
   font-family: "SignPaint";
@@ -92,16 +93,116 @@ h2 {
   width: 130px;
   text-align: center;
   position: absolute;
-
-  top: 160px;
+  top: 150px;
   color: white;
   font-family: "SignPaint";
 }
 .storyTxt {
-  width: 100%;
   height: auto;
   color: rgb(152, 50, 48);
   font-size: 16px;
   padding: 0 10px 0 10px;
+  font-family: "Lato";
+  font-weight: lighter;
 }
+@media screen and (min-width: 700px){
+  .thirdPage {
+    height: auto;
+  }
+  hr {
+    width: 30%;
+    border-top: 6px solid grey;
+    margin-bottom: 150px;
+  }
+  h2 {
+    font-size: 3.5em;
+    margin-bottom: 40px;
+  }
+  .picBloc {
+    width: 300px;
+    height: 300px;
+    margin-right: 4%;
+  }
+  .pic {
+    width: 300px;
+    height: 300px;
+  }
+  .picTxt {
+    height: 100px;
+    width: 300px;
+    top: 210px;
+    font-size: 1.7em;
+  }
+  .storyTxt {
+    font-size: 16px;
+    margin-left: 4%;
+    line-height: 30px;
+    margin-right: 4%;
+    padding: 0;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (min-width: 1300px){
+  h2{
+    font-size: 6em;
+  }
+  .picBloc{
+    width: 500px;
+    height: 500px;
+  }
+  .pic {
+    width: 500px;
+    height: 500px;
+  }
+  .picTxt {
+    top: 380px;
+    font-size: 2.3em;
+  }
+  .storyTxt {
+    font-size: 25px;
+    line-height: 60px;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+
+}
+
+/*@media screen and (min-width: 769px) {
+  .thirdPage {
+    height: auto;
+  }
+  hr {
+    width: 30%;
+    border-top: 6px solid grey;
+    margin-bottom: 150px;
+  }
+  h2 {
+    font-size: 6em;
+    margin-bottom: 40px;
+  }
+  .picBloc {
+    width: 700px;
+    height: 700px;
+    margin-right: 4%;
+  }
+  .pic {
+    width: 700px;
+    height: 700px;
+  }
+  .picTxt {
+    height: 100px;
+    width: 500px;
+    top: 550px;
+    font-size: 2.7em;
+  }
+  .storyTxt {
+    font-size: 25px;
+    margin-left: 4%;
+    line-height: 70px;
+    margin-right: 4%;
+    padding: 0;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+}*/
 </style>
