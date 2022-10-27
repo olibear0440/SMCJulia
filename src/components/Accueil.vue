@@ -1,10 +1,8 @@
 <template>
   <div class="mainPage">
     <div class="bannerBack"></div>
-
     <div class="bannerFront"></div>
     <img class="dressingImg" :src="dressing" alt="dressing-smc" />
-
     <img class="logoImg" :src="logo" alt="logo-smc" />
     <div class="mainBtn">
       <a href="#etapeUn" class="mainBtnTitle">CONCEPT</a>
@@ -36,6 +34,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
 }
 
 .bannerBack {
@@ -55,7 +54,7 @@ export default {
 .dressingImg {
   width: 100%;
   height: 380px;
-  position: relative;
+  //position: relative;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -81,7 +80,6 @@ export default {
   font-size: 2.1em;
   font-weight: lighter;
   width: 100%;
-  
 }
 
 @media screen and (min-width: 700px) {
@@ -110,9 +108,12 @@ export default {
     height: 55px;
     padding-top: 12px;
     position: absolute;
+    z-index: 0;
+    top: 55%;
+    /*
     top: 70%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);*/
   }
   .mainBtnTitle {
     font-weight: bold;
@@ -125,103 +126,12 @@ export default {
     width: 800px;
     height: 800px;
   }
-  .mainBtn{
+  .mainBtn {
     width: 400px;
     height: 75px;
   }
-  .mainBtnTitle{
+  .mainBtnTitle {
     font-size: 3.1em;
   }
 }
-
-/*
-.mainPage {
-  height: 600px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.bannerBack {
-  background-color: black;
-  height: 100px;
-  width: 100%;
-}
-.bannerFront {
-  background-color: black;
-  width: 100%;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.dressingImg {
-  width: 100%;
-  height: 400px;
-  position: relative;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.logoImg {
-  width: 60%;
-  position: absolute;
-  top: -17%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-.mainBtn {
-  font-family: "SignPaint";
-  padding: 6px 22px;
-  border: 2px solid rgb(152, 50, 48);
-  cursor: pointer;
-  border-radius: 0.2em;
-  text-align: center;
-}
-.mainBtnTitle {
-  color: rgb(202, 99, 68);
-  font-size: 2.1em;
-  font-weight: lighter;
-  width: 100%;
-}
-
-@media screen and (min-width: 769px) {
-  .bannerFront {
-    display: none;
-  }
-  .mainPage {
-    height: 100vh;
-  }
-  .dressingImg {
-    height: 100%;
-  }
-  .mainImg {
-    width: 40%;
-    height: auto;
-  }
-  .logoImg {
-    top: -25%;
-    width: 30%;
-  }
-  .mainBtn {
-    width: 15%;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    background-color: rgba(238, 235, 235, 0.8);
-    border: 5px solid rgb(238, 235, 235, 0.8);
-    border-radius: 0.5em;
-    padding: 15px 0 0 0;
-  }
-  .mainBtnTitle {
-    font-size: 3.5em;
-    font-weight: bold;
-    color: rgb(202, 99, 68);
-  }
-}
-*/
 </style>
