@@ -11,6 +11,7 @@
         SMC_ShopMyCloset</a>
         
       </p>
+      <p class="num"> 06.72.24.54.29</p>
       <p class="web"><a href="#"> www.shopmycloset.fr</a></p>
     </div>
     <div class="blocCopyR">
@@ -62,12 +63,16 @@ h2 {
   padding: 5px;
   margin-bottom: 60px;
 }
-.contact,
+.contact, .num, 
 .instag {
   margin-bottom: 10px;
   font-size: 20px;
   padding: 5px;
 }
+.num{
+    font-family: "SignPaint";
+    font-size: 2em;
+  }
 .fa-instagram{
   font-size: 1.5rem;
 }
@@ -98,6 +103,7 @@ a{
     font-size: 25px;
     line-height: 35px;
   }
+  
   .web {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.1rem;
@@ -125,6 +131,9 @@ a{
 .fa-copyright {
   font-size: 1.1em;
 }
+.num{
+    font-size: 1.3em;
+  }
 .blocCopyR{
   margin-right: 4%;
   margin-left: 4%;
