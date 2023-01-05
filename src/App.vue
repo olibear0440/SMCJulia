@@ -5,7 +5,7 @@
     <Concept />
     <Histoire />
     <Informations />
-    <Footer />
+    <Contact />
   </div>
   <!--<img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>-->
@@ -17,7 +17,7 @@ import Navbar from "./components/Navbar.vue";
 import Concept from "./components/Concept.vue";
 import Histoire from "./components/Histoire.vue";
 import Informations from "./components/Informations.vue";
-import Footer from "./components/Footer.vue";
+import Contact from "./components/Contact.vue";
 
 export default {
   name: "App",
@@ -27,7 +27,7 @@ export default {
     Concept,
     Histoire,
     Informations,
-    Footer,
+    Contact,
   },
 };
 </script>

@@ -97,7 +97,7 @@ h2 {
   .secStep,
   .thiStep {
     width: 32%;
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -112,10 +112,14 @@ h2 {
   .mainTxt {
     font-size: 1.7em;
     margin-bottom: 20px;
+    width: auto;
+    height: auto;
   }
   .secTxt {
     font-size: 1.7em;
-    width: 80%;
+    //width: 80%;
+    width: auto;
+    height: auto;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -125,7 +129,7 @@ h2 {
   .firStep,
   .secStep,
   .thiStep {
-    height: 600px;
+    height: 700px;
     margin-top: 250px;
   }
   .firStep {

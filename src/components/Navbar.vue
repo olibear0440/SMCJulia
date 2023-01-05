@@ -24,6 +24,9 @@
           <li class="nav-item">
             <a href="#informations" class="nav-link">Informations</a>
           </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
         </ul>
         <span
           class="fa fa-times fa-2x nav-close"
@@ -106,9 +109,10 @@ p {
   width: 100%;
   bottom: -100%;
   left: 0;
-  padding: 4rem 0 3rem;
+  padding: 1rem 0 3rem;
   transition: 0.4s;
-  background-color: rgba(255, 255, 255, 0.8);
+  //background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .nav-menu.show {
