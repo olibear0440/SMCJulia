@@ -81,6 +81,7 @@ export default {
   flex-direction: column;
   justify-content: left;
   align-items: baseline;
+  //letter-spacing: 0.1rem;
 }
 h2 {
   color: white;
@@ -124,6 +125,7 @@ p {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  letter-spacing: 0.1rem;
 }
 .nav-item {
   width: 100%;

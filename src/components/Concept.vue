@@ -69,6 +69,7 @@ h2 {
   margin-bottom: 15px;
   width: auto;
   height: auto;
+  letter-spacing: 0.1rem;
 }
 .mainTxt {
   color: rgb(152, 50, 48);

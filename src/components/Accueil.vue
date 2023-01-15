@@ -1,7 +1,12 @@
 <template>
   <div class="mainPage">
     <div class="bannerBack"></div>
-    <div class="bannerFront"></div>
+    <div class="bannerFront">
+      <h2 class="pitch">
+        Confiez moi les vêtements que vous souhaitez vendre, je m'occupe de tout
+        !
+      </h2>
+    </div>
     <img class="dressingImg" :src="dressing" alt="dressing-smc" />
     <img class="logoImg" :src="logo" alt="logo-smc" />
     <div class="mainBtn">
@@ -51,11 +56,21 @@ export default {
   left: 0;
   z-index: 1;
 }
+
+.pitch {
+  color: white;
+  //color: rgb(202, 99, 68);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+  padding: 12px 10px 5px 10px;
+  width: auto;
+  text-align: center;
+}
 .dressingImg {
   width: 100%;
   height: 380px;
-  //position: relative;
-  object-fit: cover;
   margin-bottom: 10px;
 }
 .logoImg {
@@ -132,6 +147,7 @@ export default {
   }
   .mainBtnTitle {
     font-size: 3.1em;
+    letter-spacing: 0.1rem;
   }
 }
 </style>
