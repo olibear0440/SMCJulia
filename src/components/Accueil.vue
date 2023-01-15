@@ -59,7 +59,6 @@ export default {
 
 .pitch {
   color: white;
-  //color: rgb(202, 99, 68);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   letter-spacing: 0.1rem;

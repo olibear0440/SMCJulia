@@ -7,8 +7,8 @@
       </div>
       <a
         href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y="
-        class="smcInsta"
-        ><span class="fa fa-instagram fa-2x" aria-hidden="true"></span
+        class="smcInsta" aria-label="lien vers le compte instagram"
+        ><span class="fa fa-instagram fa-2x" aria-hidden="true" ></span
       ></a>
       <!--<a href="#" class="smcMail"
         ><span class="fa fa-envelope-o fa-2x" aria-hidden="true"></span
