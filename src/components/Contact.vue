@@ -3,21 +3,24 @@
     <hr />
     <h2>CONTACT</h2>
     <div class="blocContact">
-      <p class="contact"><a href="mailto:julia@shopmycloset.fr"><span class="fa fa-envelope-o" aria-hidden="true"></span>
-        julia@shopmycloset.fr</a>
-        
+      <p class="contact">
+        <a href="mailto:julia@shopmycloset.fr"
+          ><span class="fa fa-envelope-o" aria-hidden="true"></span>
+          {{ mail }}</a
+        >
       </p>
-      <p class="instag"><a href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y="><span class="fa fa-instagram" aria-hidden="true"></span>
-        SMC_ShopMyCloset</a>
-        
+      <p class="instag">
+        <a href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y="
+          ><span class="fa fa-instagram" aria-hidden="true"></span>
+          {{ lienInsta }}</a
+        >
       </p>
-      <p class="num"> 06.72.24.54.29</p>
-      <p class="web"><a href="#"> www.shopmycloset.fr</a></p>
+      <p class="num">{{ numTel }}</p>
+      <p class="web"><a href="#"> {{ lienSiteInternet }}</a></p>
     </div>
     <div class="blocCopyR">
       <p class="copyR">
-        <span class="fa fa-copyright" aria-hidden="true"></span> 2022 Shop My
-        Closet - Tous droits reserves.
+        <span class="fa fa-copyright" aria-hidden="true"></span> {{ copyright }}
       </p>
     </div>
   </div>
@@ -27,7 +30,13 @@
 export default {
   name: "Contact-page",
   data: () => {
-    return {};
+    return {
+      mail: "julia@shopmycloset.fr",
+      lienInsta: "SMC_ShopMyCloset",
+      numTel: "06.72.24.54.29",
+      lienSiteInternet: "www.shopmycloset.fr",
+      copyright: "2022 Shop My Closet - Tous droits reserves."
+    };
   },
 };
 </script>
@@ -63,17 +72,18 @@ h2 {
   padding: 5px;
   margin-bottom: 60px;
 }
-.contact, .num, 
+.contact,
+.num,
 .instag {
   margin-bottom: 10px;
   font-size: 20px;
   padding: 5px;
 }
-.num{
-    font-family: "SignPaint";
-    font-size: 2em;
-  }
-.fa-instagram{
+.num {
+  font-family: "SignPaint";
+  font-size: 2em;
+}
+.fa-instagram {
   font-size: 1.5rem;
 }
 .web {
@@ -84,35 +94,35 @@ h2 {
 span {
   margin-right: 10px;
 }
-a{
+a {
   color: rgba(253, 253, 253, 0.645);
   text-decoration: none;
-
 }
-.blocCopyR{
+.blocCopyR {
   color: rgba(253, 253, 253, 0.645);
   padding: 0 10px 0 10px;
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
   h2 {
     font-size: 3.5em;
     margin-bottom: 40px;
   }
-  .contact, .instag {
+  .contact,
+  .instag {
     font-size: 25px;
     line-height: 35px;
   }
-  
+
   .web {
-  font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 0.1rem;
-  font-size: 25px;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 25px;
+  }
 }
 
-@media screen and (min-width: 1300px){
-  .fifthPage{
+@media screen and (min-width: 1300px) {
+  .fifthPage {
     height: 600px;
   }
   hr {
@@ -120,24 +130,23 @@ a{
     border-top: 6px solid grey;
     margin-bottom: 100px;
   }
-  h2{
+  h2 {
     font-size: 6em;
   }
-  .blocContact{
+  .blocContact {
     line-height: 50px;
     font-size: 2em;
   }
   .fa-instagram,
-.fa-copyright {
-  font-size: 1.1em;
-}
-.num{
+  .fa-copyright {
+    font-size: 1.1em;
+  }
+  .num {
     font-size: 1.3em;
   }
-.blocCopyR{
-  margin-right: 4%;
-  margin-left: 4%;
-}
- 
+  .blocCopyR {
+    margin-right: 4%;
+    margin-left: 4%;
+  }
 }
 </style>

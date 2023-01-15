@@ -1,7 +1,7 @@
 <template>
   <div class="thirdPage" id="histoire">
     <hr />
-    <h2>L'HISTOIRE DE SHOP MY CLOSET</h2>
+    <h2>{{ titreHistoire }}</h2>
     <div class="picBloc">
       <img
         src="../assets/img/JuliaPic.jpg"
@@ -12,19 +12,17 @@
     </div>
 
     <div class="storyTxt">
-      <p>Après 5 ans à travailler en Asie pour l'un des plus grands fournisseurs de
-      chaussures du fast-fashion, une prise de conscience se forge en moi. Je ne
-      voulais plus travailler pour une industrie si peu scrupuleuse et autant
-      polluante.</p><p class="pOfText">Je décide donc de quitter le monde du fast-fashion pour
-      celui de la seconde main et du recyclage. Avec la démocratisation de sites
-      comme Vestiaire Collective et Vinted, c'est tout naturellement que me
-      vient l'idée de devenir Personnal Seller. C'est de cette façon qu'est né
-      Shop My Closet.</p>
-      <p class="pOfText"> Depuis 2019, je m'occupe de la revente des pièces que mes clientes me
-      confient. <br />Aujourd'hui je suis heureuse d'offrir une seconde vie à
-      tous ces vêtements et de lutter activement contre le fast-fashion en
-      boostant le pouvoir d'achat de mes clientes.</p>
-      </div>
+      <p>{{ txtPartieUn }}</p>
+      <p class="pOfText">
+        {{ txtPartieDeux }}
+      </p>
+      <p class="pOfText">
+        Depuis 2019, je m'occupe de la revente des pièces que mes clientes me
+        confient. <br />Aujourd'hui je suis heureuse d'offrir une seconde vie à
+        tous ces vêtements et de lutter activement contre le fast-fashion en
+        boostant le pouvoir d'achat de mes clientes.
+      </p>
+    </div>
   </div>
 </template>
 
@@ -32,7 +30,13 @@
 export default {
   name: "Histoire-page",
   data: () => {
-    return {};
+    return {
+      titreHistoire: "L'HISTOIRE DE SHOP MY CLOSET",
+      txtPartieUn:
+        "Après 5 ans à travailler en Asie pour l'un des plus grands fournisseurs de chaussures du fast-fashion, une prise de conscience se forge en moi. Je ne voulais plus travailler pour une industrie si peu scrupuleuse et autant polluante.",
+      txtPartieDeux:
+        "Je décide donc de quitter le monde du fast-fashion pour celui de la seconde main et du recyclage. Avec la démocratisation de sites comme Vestiaire Collective et Vinted, c'est tout naturellement que me vient l'idée de devenir Personnal Seller. C'est de cette façon qu'est né Shop My Closet.",
+    };
   },
 };
 </script>
@@ -99,11 +103,11 @@ h2 {
   font-family: "Lato";
   font-weight: lighter;
 }
-.pOfText{
+.pOfText {
   margin-top: 10px;
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 700px) {
   .thirdPage {
     height: auto;
   }
@@ -140,15 +144,15 @@ h2 {
     margin-bottom: 80px;
   }
 }
-@media screen and (min-width: 1300px){
-  hr{
+@media screen and (min-width: 1300px) {
+  hr {
     border: none;
     margin-bottom: 150px;
   }
-  h2{
+  h2 {
     font-size: 6em;
   }
-  .picBloc{
+  .picBloc {
     width: 500px;
     height: 500px;
   }
@@ -166,7 +170,6 @@ h2 {
     font-weight: bold;
     margin-bottom: 100px;
   }
-
 }
 
 /*@media screen and (min-width: 769px) {

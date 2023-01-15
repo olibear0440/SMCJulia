@@ -7,8 +7,9 @@
       </div>
       <a
         href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y="
-        class="smcInsta" aria-label="lien vers le compte instagram"
-        ><span class="fa fa-instagram fa-2x" aria-hidden="true" ></span
+        class="smcInsta"
+        aria-label="lien vers le compte instagram"
+        ><span class="fa fa-instagram fa-2x" aria-hidden="true"></span
       ></a>
       <!--<a href="#" class="smcMail"
         ><span class="fa fa-envelope-o fa-2x" aria-hidden="true"></span
@@ -16,16 +17,16 @@
       <div class="nav-menu" :class="isShow ? 'show' : ''">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#etapeUn" class="nav-link">Concept</a>
+            <a href="#etapeUn" class="nav-link">{{ navTitreUn }}</a>
           </li>
           <li class="nav-item">
-            <a href="#histoire" class="nav-link">Histoire</a>
+            <a href="#histoire" class="nav-link">{{ navTitreDeux }}</a>
           </li>
           <li class="nav-item">
-            <a href="#informations" class="nav-link">Informations</a>
+            <a href="#informations" class="nav-link">{{ navTitreTrois }}</a>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">{{ navTitreQuatre }}</a>
           </li>
         </ul>
         <span
@@ -47,6 +48,10 @@ export default {
   data: () => {
     return {
       isShow: false,
+      navTitreUn: "Concept",
+      navTitreDeux: "Histoire",
+      navTitreTrois: "Informations",
+      navTitreQuatre: "Contact",
     };
   },
 };

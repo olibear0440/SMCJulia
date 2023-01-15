@@ -3,8 +3,7 @@
     <div class="firStep">
       <h2>Etape 1</h2>
       <p class="mainTxt">
-        Je me deplace chez vous et je collecte les vetements que vous souhaitez
-        vendre.
+        {{ txtOne }}
       </p>
     </div>
     <div class="secStep">
@@ -26,7 +25,10 @@
 export default {
   name: "Concept-page",
   data: () => {
-    return {};
+    return {
+      txtOne:
+        "Je me deplace chez vous et je collecte les vetements que vous souhaitez vendre.",
+    };
   },
 };
 </script>

@@ -3,14 +3,13 @@
     <div class="bannerBack"></div>
     <div class="bannerFront">
       <h2 class="pitch">
-        Confiez moi les vêtements que vous souhaitez vendre, je m'occupe de tout
-        !
+        {{ pitchAccueil }}
       </h2>
     </div>
     <img class="dressingImg" :src="dressing" alt="dressing-smc" />
     <img class="logoImg" :src="logo" alt="logo-smc" />
     <div class="mainBtn">
-      <a href="#etapeUn" class="mainBtnTitle">CONCEPT</a>
+      <a href="#etapeUn" class="mainBtnTitle"> {{ btnAccueil }}</a>
     </div>
   </div>
 </template>
@@ -24,6 +23,9 @@ export default {
     return {
       logo: logoSmc,
       dressing: dressingSmc,
+      pitchAccueil:
+        "Confiez moi les vêtements que vous souhaitez vendre, je m'occupe de tout !",
+      btnAccueil: "CONCEPT",
     };
   },
 };
