@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import logoSmc from "../assets/img/LOGOSMC.png";
-import dressingSmc from "../assets/img/closet.jpg";
+import logoSmc from "../assets/img/LOGOSMC.webp";
+import dressingSmc from "../assets/img/closet.webp";
 export default {
   name: "Accueil-page",
   data: () => {

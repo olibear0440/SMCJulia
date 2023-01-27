@@ -4,7 +4,7 @@
     <h2>{{ titreHistoire }}</h2>
     <div class="picBloc">
       <img
-        src="../assets/img/JuliaPic.jpg"
+        src="../assets/img/JuliaPic.webp"
         class="pic"
         alt="photo de la creatrice"
       />
