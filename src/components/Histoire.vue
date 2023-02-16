@@ -33,7 +33,7 @@ export default {
     return {
       titreHistoire: "L'HISTOIRE DE SHOP MY CLOSET",
       txtPartieUn:
-        "Après 5 ans à travailler en Asie pour l'un des plus grands fournisseurs de chaussures du fast-fashion, une prise de conscience se forge en moi. Je ne voulais plus travailler pour une industrie si peu scrupuleuse et autant polluante.",
+        "Après 5 ans à travailler en Asie pour l'un des plus grands fournisseurs de chaussures du fast-fashion, une prise de conscience se forge en moi. Je ne voulais plus travailler pour une industrie qui implique l'exploitation et la surproduction.",
       txtPartieDeux:
         "Je décide donc de quitter le monde du fast-fashion pour celui de la seconde main et du recyclage. Avec la démocratisation de sites comme Vestiaire Collective et Vinted, c'est tout naturellement que me vient l'idée de devenir Personnal Seller. C'est de cette façon qu'est né Shop My Closet.",
     };
