@@ -6,11 +6,15 @@
         {{ pitchAccueil }}
       </h2>
     </div>
-    <img class="dressingImg" :src="dressing" alt="dressing-smc" />
+    <h1>lolo</h1>
+    <!--
+      <img class="dressingImg" :src="dressing" alt="dressing-smc" />
     <img class="logoImg" :src="logo" alt="logo-smc" />
     <div class="mainBtn">
       <a href="#etapeUn" class="mainBtnTitle"> {{ btnAccueil }}</a>
     </div>
+    -->
+    
   </div>
 </template>
 
@@ -34,8 +38,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 @import "../assets/font/font-family.css";
+
 .mainPage {
-  height: 600px;
+  height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -69,6 +74,9 @@ export default {
   width: auto;
   text-align: center;
 }
+
+
+/*
 .dressingImg {
   width: 100%;
   height: 380px;
@@ -97,6 +105,7 @@ export default {
   font-weight: lighter;
   width: 100%;
 }
+*/
 
 @media screen and (min-width: 700px) {
   .mainPage {
@@ -106,6 +115,7 @@ export default {
   .bannerBack {
     display: none;
   }
+  /*
   .dressingImg {
     height: auto;
     margin-bottom: 15px;
@@ -126,16 +136,14 @@ export default {
     position: absolute;
     z-index: 0;
     top: 55%;
-    /*
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, 50%);*/
   }
   .mainBtnTitle {
     font-weight: bold;
     color: white;
   }
+  */
 }
+/*
 @media screen and (min-width: 1300px) {
   .logoImg {
     top: -4%;
@@ -151,4 +159,5 @@ export default {
     letter-spacing: 0.1rem;
   }
 }
+*/
 </style>

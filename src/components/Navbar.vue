@@ -1,10 +1,11 @@
 <template>
   <div class="nav-bar">
     <nav class="nav">
-      <div class="navLogo">
+      <router-link to="/" class="navLogo">
         <h2>Julia PAPILLON</h2>
         <p>PERSONAL SELLER</p>
-      </div>
+      </router-link>
+
       <a
         href="https://instagram.com/smc_shopmycloset?igshid=YmMyMTA2M2Y="
         class="smcInsta"
@@ -17,16 +18,24 @@
       <div class="nav-menu" :class="isShow ? 'show' : ''">
         <ul class="nav-list">
           <li class="nav-item">
-            <a href="#etapeUn" class="nav-link">{{ navTitreUn }}</a>
+            <router-link to="/step" class="nav-link">{{
+              navTitreUn
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <a href="#histoire" class="nav-link">{{ navTitreDeux }}</a>
+            <router-link to="/story" class="nav-link">{{
+              navTitreDeux
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <a href="#informations" class="nav-link">{{ navTitreTrois }}</a>
+            <router-link to="/conditions" class="nav-link">{{
+              navTitreTrois
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <a href="#contact" class="nav-link">{{ navTitreQuatre }}</a>
+            <router-link to="/contact" class="nav-link">{{
+              navTitreQuatre
+            }}</router-link>
           </li>
         </ul>
         <span
@@ -40,6 +49,7 @@
       </div>
     </nav>
   </div>
+  <router-view />
 </template>
 
 <script>
@@ -67,7 +77,7 @@ export default {
   bottom: 0;
   left: 0;
   z-index: 1;
-  background-color: black;
+  background-color: #191a1b;
   color: rgb(202, 99, 68);
 }
 .nav {
@@ -87,6 +97,7 @@ export default {
   justify-content: left;
   align-items: baseline;
   //letter-spacing: 0.1rem;
+  text-decoration: none;
 }
 h2 {
   color: white;
@@ -95,6 +106,7 @@ h2 {
   font-size: 20px;
   padding: 0 5px;
   width: 150px;
+  margin-bottom: 0;
 }
 p {
   color: white;
@@ -103,6 +115,7 @@ p {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
+  margin-top: 0;
 }
 .smcInsta {
   color: rgb(202, 99, 68);
@@ -137,6 +150,7 @@ p {
   text-align: center;
   padding: 5px 0px;
   margin: 5px 0 5px 0;
+  list-style-type: none;
 }
 .nav-link {
   width: 100%;
@@ -144,6 +158,7 @@ p {
   font-size: 50px;
   font-family: "TheLastDay";
   color: rgb(202, 99, 68);
+  text-decoration: none;
 }
 .nav-close {
   position: absolute;
