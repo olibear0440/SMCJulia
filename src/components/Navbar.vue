@@ -18,7 +18,11 @@
         aria-label="lien vers l'adresse mail"
         ><span class="fa fa-envelope-o fa-2x" aria-hidden="true"></span
       ></a>
-      <div class="nav-menu" :class="isShow ? 'show' : ''">
+      <div
+        class="nav-menu"
+        :class="isShow ? 'show' : ''"
+        @click="isShow = !isShow"
+      >
         <ul class="nav-list">
           <li class="nav-item">
             <router-link to="/step" class="nav-link">{{
@@ -41,11 +45,11 @@
             }}</router-link>
           </li>
         </ul>
-        <span
+        <!--<span
           class="fa fa-times fa-2x nav-close"
           @click="isShow = !isShow"
           aria-hidden="true"
-        ></span>
+        ></span>-->
       </div>
       <div class="nav-toggle" @click="isShow = !isShow">
         <span class="fa fa-bars fa-2x" aria-hidden="true"></span>
@@ -128,14 +132,13 @@ p {
   cursor: pointer;
   margin-left: 27px;
 }
-.smcMail{
+.smcMail {
   color: rgb(202, 99, 68);
   font-size: 1rem;
   cursor: pointer;
   position: relative;
   bottom: 2px;
   text-decoration: none;
-
 }
 .nav-menu {
   position: fixed;
@@ -196,7 +199,8 @@ p {
     height: 100px;
     max-width: 100%;
   }
-  .smcInsta, .smcMail,
+  .smcInsta,
+  .smcMail,
   .nav-toggle,
   .nav-close {
     display: none;
