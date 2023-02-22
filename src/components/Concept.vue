@@ -1,22 +1,31 @@
 <template>
   <div class="secondPage" id="etapeUn">
     <div class="firStep">
-      <h2>Etape 1</h2>
-      <p class="mainTxt">
-        {{ txtOne }}
-      </p>
+      <div class="mainTit"><h4>Etape 1</h4></div>
+      <div class="mainTxt">
+        <p>
+          {{ txtOne }}
+        </p>
+      </div>
+      <div class="secTxt"></div>
     </div>
     <div class="secStep">
-      <h2>Etape 2</h2>
-      <p class="mainTxt">Je stocke vos articles et je m'occupe de tout !</p>
-      <p class="secTxt">(estimations, photos, annonces, colis...)</p>
+      <div class="mainTit"><h4>Etape 2</h4></div>
+      <div class="mainTxt">
+        <p>Je stocke vos articles et je m'occupe de tout !</p>
+      </div>
+      <div class="secTxt"><p>(estimations, photos, annonces, colis...)</p></div>
     </div>
     <div class="thiStep">
-      <h2>Etape 3</h2>
-      <p class="mainTxt">
-        Recevez simplement votre chèque issu de la vente de vos vetements !
-      </p>
-      <p class="secTxt">La règle est simple, c'est moitié-moitié !</p>
+      <div class="mainTit"><h4>Etape 3</h4></div>
+      <div class="mainTxt">
+        <p>
+          Recevez simplement votre chèque issu de la vente de vos vetements !
+        </p>
+      </div>
+      <div class="secTxt">
+        <p>La règle est simple, c'est moitié-moitié !</p>
+      </div>
     </div>
   </div>
 </template>
@@ -30,6 +39,45 @@ export default {
         "Je me deplace chez vous et je collecte les vetements que vous souhaitez vendre.",
     };
   },
+  mounted() {
+    const ratio = 0.1;
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: ratio,
+    };
+    const handleIntersect = function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio > ratio) {
+          entry.target.classList.add("firStep-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const handleIntersectSec = function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio > ratio) {
+          entry.target.classList.add("secStep-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+    const handleIntersectThi = function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio > ratio) {
+          entry.target.classList.add("thiStep-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersect, options);
+    const observerSec = new IntersectionObserver(handleIntersectSec, options);
+    const observerThi = new IntersectionObserver(handleIntersectThi, options);
+    observer.observe(document.querySelector(".firStep"));
+    observerSec.observe(document.querySelector(".secStep"));
+    observerThi.observe(document.querySelector(".thiStep"));
+  },
 };
 </script>
 
@@ -42,114 +90,115 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 30px;
-  margin: 50px 0px;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+  padding-bottom: 30px;
 }
 .firStep,
 .secStep,
 .thiStep {
-  width: 90%;
-  height: 210px;
+  width: 80%;
+  height: 170px;
   margin-bottom: 10px;
-  padding: 20px 20px;
+  padding: 5px 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: rgb(255, 255, 255, 0.8);
 }
+
 .firStep {
-  margin-top: 5px;
+  margin-top: 10px;
 }
-h2 {
+
+.mainTit h4 {
   font-family: "TheLastDay";
   color: rgb(202, 99, 68);
-  font-size: 40px;
+  font-size: 35px;
   font-weight: lighter;
   margin-bottom: 15px;
-  width: auto;
+  margin-top: 5px;
+  width: 100%;
   height: auto;
   letter-spacing: 0.1rem;
+  text-align: center;
 }
-.mainTxt {
+.mainTxt p {
   color: rgb(152, 50, 48);
   font-size: 25px;
   font-family: "SignPaint";
   font-weight: lighter;
   margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
 }
-.secTxt {
+.secTxt p {
   color: rgb(152, 50, 48, 0.7);
-  font-size: 25px;
+  font-size: 20px;
   font-family: "SignPaint";
   font-weight: lighter;
   text-align: end;
+  margin: 5px 0;
+  width: 100%;
+  height: 30px;
 }
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1025px) {
   .secondPage {
-    height: 60vh;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 180px;
-  }
-  .firStep,
-  .secStep,
-  .thiStep {
-    width: 32%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    background-color: rgb(255, 255, 255, 0.8);
-    margin-top: 200px;
-  }
-  h2 {
-    font-size: 4em;
-    margin-bottom: 30px;
-  }
-  .mainTxt {
-    font-size: 1.7em;
-    margin-bottom: 20px;
-    width: auto;
-    height: auto;
-  }
-  .secTxt {
-    font-size: 1.7em;
-    //width: 80%;
-    width: auto;
-    height: auto;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .secondPage {
-    margin-bottom: 300px;
+    padding: 300px 50px 200px 50px;
   }
   .firStep,
   .secStep,
   .thiStep {
-    height: 700px;
-    margin-top: 250px;
+    width: 28%;
+    height: 650px;
+    padding-left: 25px;
+    padding-right: 25px;
+    /*opacity: 0;
+    transform: translateY(100px);*/
   }
   .firStep {
-    margin-top: 0;
-    margin-top: 250px;
+    margin-top: 0px;
   }
-  h2 {
-    font-size: 6em;
-    margin-bottom: 60px;
+  /*.firStep-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 1.1s;
+
+    transition-timing-function: ease;
   }
-  .mainTxt {
-    font-size: 3.7em;
+  .secStep-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 1.1s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease;
+  }
+  .thiStep-visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-duration: 1.1s;
+    transition-delay: 1s;
+    transition-timing-function: ease;
+  }
+  */
+
+  .mainTit h4 {
+    margin-top: 35px;
+    height: 30%;
+    font-size: 100px;
+    margin-bottom: 80px;
+  }
+
+  .mainTxt p {
+    height: 30%;
+    font-size: 45px;
     margin-bottom: 40px;
   }
-  .secTxt {
-    font-size: 3.7em;
-    width: 80%;
+  .secTxt p {
+    height: 30%;
+    font-size: 40px;
   }
 }
 </style>

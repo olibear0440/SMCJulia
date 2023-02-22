@@ -12,9 +12,12 @@
         aria-label="lien vers le compte instagram"
         ><span class="fa fa-instagram fa-2x" aria-hidden="true"></span
       ></a>
-      <!--<a href="#" class="smcMail"
+      <a
+        href="mailto:julia@shopmycloset.fr"
+        class="smcMail"
+        aria-label="lien vers l'adresse mail"
         ><span class="fa fa-envelope-o fa-2x" aria-hidden="true"></span
-      ></a>-->
+      ></a>
       <div class="nav-menu" :class="isShow ? 'show' : ''">
         <ul class="nav-list">
           <li class="nav-item">
@@ -96,32 +99,43 @@ export default {
   flex-direction: column;
   justify-content: left;
   align-items: baseline;
-  //letter-spacing: 0.1rem;
+  letter-spacing: 0.1rem;
   text-decoration: none;
 }
 h2 {
   color: white;
   font-family: "SignPaint";
   font-weight: lighter;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0 5px;
   width: 150px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 p {
   color: white;
   width: 150px;
   padding: 0 5px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   letter-spacing: 0.1rem;
   margin-top: 0;
+  margin-bottom: 0;
 }
 .smcInsta {
   color: rgb(202, 99, 68);
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 27px;
+}
+.smcMail{
+  color: rgb(202, 99, 68);
   font-size: 1rem;
   cursor: pointer;
-  margin-right: 50px;
+  position: relative;
+  bottom: 2px;
+  text-decoration: none;
+
 }
 .nav-menu {
   position: fixed;
@@ -170,10 +184,10 @@ p {
   color: rgb(202, 99, 68);
 }
 .nav-toggle {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1025px) {
   .nav-bar {
     top: 0;
     bottom: initial;
@@ -182,7 +196,7 @@ p {
     height: 100px;
     max-width: 100%;
   }
-  .smcInsta,
+  .smcInsta, .smcMail,
   .nav-toggle,
   .nav-close {
     display: none;
@@ -190,22 +204,19 @@ p {
   .navLogo {
     height: 100%;
     justify-content: center;
-    width: 20%;
   }
   h2,
   p {
     width: 100%;
     text-align: center;
   }
-
-  @media screen and (min-width: 1050px) {
-    h2 {
-      font-size: 2.1em;
-    }
-    p {
-      font-size: 1em;
-    }
+  h2 {
+    font-size: 30px;
   }
+  p {
+    font-size: 0.9em;
+  }
+
   .nav-menu {
     top: 0;
     position: static;

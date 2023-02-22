@@ -6,15 +6,17 @@
         {{ pitchAccueil }}
       </h2>
     </div>
-    <h1>lolo</h1>
-    <!--
+    <div class="backgroundImg">
       <img class="dressingImg" :src="dressing" alt="dressing-smc" />
-    <img class="logoImg" :src="logo" alt="logo-smc" />
-    <div class="mainBtn">
-      <a href="#etapeUn" class="mainBtnTitle"> {{ btnAccueil }}</a>
+      <div class="blocLogo">
+        <div class="blocImg">
+          <img class="logoImg" :src="logo" alt="logo-smc" />
+        </div>
+        <RouterLink to="/step" class="mainBtn">
+          <p class="mainBtnTitle">{{ btnAccueil }}</p>
+        </RouterLink>
+      </div>
     </div>
-    -->
-    
   </div>
 </template>
 
@@ -40,13 +42,14 @@ export default {
 @import "../assets/font/font-family.css";
 
 .mainPage {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   position: relative;
+  padding-bottom: 55px;
 }
 
 .bannerBack {
@@ -70,94 +73,118 @@ export default {
   font-weight: lighter;
   letter-spacing: 0.1rem;
   font-size: 0.8rem;
-  padding: 12px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
   width: auto;
   text-align: center;
 }
 
-
-/*
+.backgroundImg {
+  width: 100%;
+  height: auto;
+}
 .dressingImg {
   width: 100%;
-  height: 380px;
-  margin-bottom: 10px;
+  height: 385px;
+  object-fit: cover;
 }
-.logoImg {
-  width: 250px;
-  height: 250px;
+.blocLogo {
+  width: 60%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 20px;
+  left: 20%;
 }
-.mainBtn {
-  width: 150px;
-  height: 50px;
-  font-family: "SignPaint";
-  padding: 6px 22px;
-  border: 2px solid rgb(152, 50, 48);
-  cursor: pointer;
-  border-radius: 0.2em;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.mainBtnTitle {
-  color: rgb(202, 99, 68);
-  font-size: 2.1em;
-  font-weight: lighter;
+.blocImg,
+.logoImg {
   width: 100%;
 }
-*/
+.blocImg {
+  margin-bottom: 100px;
+  opacity: 1;
+}
 
-@media screen and (min-width: 700px) {
+.mainBtn {
+  background-color: rgb(202, 99, 68);
+  padding: 10px 25px 10px 25px;
+  width: 40%;
+  text-align: center;
+  font-family: "SignPaint";
+  cursor: pointer;
+  border-radius: 0.4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgb(202, 99, 68);
+  opacity: 1;
+}
+
+.mainBtnTitle {
+  font-size: 1.5em;
+  color: white;
+  margin: 0;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1025px) {
   .mainPage {
     height: auto;
+    padding-bottom: 0;
   }
   .bannerFront,
   .bannerBack {
     display: none;
   }
-  /*
+  .pitch {
+    padding: 12px 10px 5px 10px;
+  }
+  .backgroundImg {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
   .dressingImg {
+    width: 100%;
+    height: 100vh;
+  }
+  .blocLogo {
+    top: -20px;
+    left: 30%;
+    width: 40%;
     height: auto;
-    margin-bottom: 15px;
   }
-  .logoImg {
-    margin: 0 auto;
-    width: 400px;
-    height: 400px;
+  .blocImg {
+    opacity: 0;
+    animation: scaleImg 1.3s ease forwards;
   }
-
+  @keyframes scaleImg {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
   .mainBtn {
-    background-color: rgb(202, 99, 68);
-    border: 2px solid rgb(202, 99, 68);
-    border-radius: 0.3em;
-    width: 220px;
-    height: 55px;
-    padding-top: 12px;
-    position: absolute;
-    z-index: 0;
-    top: 55%;
+    width: 25%;
+    padding: 15px 25px 10px 25px;
+    opacity: 0;
+    animation: scaleImg 1.3s 0.6s ease forwards;
   }
   .mainBtnTitle {
-    font-weight: bold;
+    text-decoration: none;
     color: white;
-  }
-  */
-}
-/*
-@media screen and (min-width: 1300px) {
-  .logoImg {
-    top: -4%;
-    width: 800px;
-    height: 800px;
-  }
-  .mainBtn {
-    width: 400px;
-    height: 75px;
-  }
-  .mainBtnTitle {
-    font-size: 3.1em;
+    font-size: 2.1em;
+    width: 100%;
+    font-weight: bold;
     letter-spacing: 0.1rem;
+    margin: 0;
   }
 }
-*/
 </style>

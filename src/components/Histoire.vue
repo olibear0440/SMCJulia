@@ -94,120 +94,53 @@ h2 {
   color: white;
   font-family: "SignPaint";
   font-size: 17px;
+  margin-top: 0;
 }
 .storyTxt {
   height: auto;
   color: rgb(152, 50, 48);
   font-size: 16px;
   padding: 0 10px 0 10px;
-  font-family: "Lato";
+  font-family: "Lato", sans-serif;
   font-weight: lighter;
 }
 .pOfText {
   margin-top: 10px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1025px) {
   .thirdPage {
     height: auto;
-  }
-  hr {
-    width: 30%;
-    border-top: 6px solid grey;
-    margin-bottom: 150px;
+    margin-bottom: 0;
+    
   }
   h2 {
-    font-size: 3.5em;
-    margin-bottom: 40px;
+    padding-top: 100px;
+    font-size: 100px;
+    margin-top: 0;
   }
   .picBloc {
-    width: 300px;
-    height: 300px;
-    margin-right: 4%;
+    width: 600px;
+    height: 600px;
+    padding-right: 50px;
   }
   .pic {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
   }
   .picTxt {
-    height: 100px;
-    width: 300px;
-    top: 210px;
-    font-size: 1.7em;
-  }
-  .storyTxt {
-    font-size: 16px;
-    margin-left: 4%;
-    line-height: 30px;
-    margin-right: 4%;
-    padding: 0;
-    margin-bottom: 80px;
-  }
-}
-@media screen and (min-width: 1300px) {
-  hr {
-    border: none;
-    margin-bottom: 150px;
-  }
-  h2 {
-    font-size: 6em;
-  }
-  .picBloc {
-    width: 500px;
-    height: 500px;
-  }
-  .pic {
-    width: 500px;
-    height: 500px;
-  }
-  .picTxt {
-    top: 380px;
+    top: 550px;
     font-size: 2.3em;
+    width: auto;
+    letter-spacing: 0.1rem;
   }
-  .storyTxt {
-    font-size: 25px;
+  .storyTxt{
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 2.2em;
     line-height: 60px;
-    font-weight: bold;
-    margin-bottom: 100px;
+    font-weight: 700;
   }
 }
 
-/*@media screen and (min-width: 769px) {
-  .thirdPage {
-    height: auto;
-  }
-  hr {
-    width: 30%;
-    border-top: 6px solid grey;
-    margin-bottom: 150px;
-  }
-  h2 {
-    font-size: 6em;
-    margin-bottom: 40px;
-  }
-  .picBloc {
-    width: 700px;
-    height: 700px;
-    margin-right: 4%;
-  }
-  .pic {
-    width: 700px;
-    height: 700px;
-  }
-  .picTxt {
-    height: 100px;
-    width: 500px;
-    top: 550px;
-    font-size: 2.7em;
-  }
-  .storyTxt {
-    font-size: 25px;
-    margin-left: 4%;
-    line-height: 70px;
-    margin-right: 4%;
-    padding: 0;
-    font-weight: bold;
-    margin-bottom: 100px;
-  }
-}*/
 </style>

@@ -33,5 +33,5 @@ export default {
 <style scoped>
 
 .mobileContent{
-  display: none;
+  display: block;
 }</style>

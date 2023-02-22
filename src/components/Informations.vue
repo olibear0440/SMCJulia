@@ -96,14 +96,15 @@ h2 {
   font-size: 25px;
   padding: 30px 0px 10px 0px;
   margin-bottom: 20px;
+  margin-top: 0;
 }
 ul {
   height: 1170px;
   color: rgb(172, 121, 120);
   font-size: 16px;
-  padding: 0 10px 0 10px;
-  display: list-item;
+  padding: 0 10px 30px 10px;
   list-style-position: inside;
+  margin-bottom: 0;
 }
 li {
   margin-bottom: 15px;
@@ -112,34 +113,23 @@ li {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1025px) {
   h2 {
-    font-size: 3.5em;
-    margin-bottom: 40px;
-    padding-top: 150px;
+    font-size: 100px;
+    padding: 120px 0px 5px;
+    margin: 0px 0px 20px;
   }
   ul {
-    margin-left: 4%;
-    margin-right: 4%;
-    height: 700px;
-  }
-  li {
-    font-size: 16px;
-    line-height: 20px;
-    overflow: auto;
-  }
-}
-
-@media screen and (min-width: 1300px) {
-  h2 {
-    font-size: 6em;
-  }
-  ul {
-    height: 1000px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 100px;
+    height: auto;
+    margin-bottom: 0;
   }
   li {
     font-size: 25px;
-    line-height: 35px;
+    line-height: 30px;
+    margin-bottom: 30px;
   }
 }
 </style>

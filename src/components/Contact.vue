@@ -16,7 +16,9 @@
         >
       </p>
       <p class="num">{{ numTel }}</p>
-      <p class="web"><a href="#"> {{ lienSiteInternet }}</a></p>
+      <p class="web">
+        <a href="#"> {{ lienSiteInternet }}</a>
+      </p>
     </div>
     <div class="blocCopyR">
       <p class="copyR">
@@ -35,7 +37,7 @@ export default {
       lienInsta: "SMC_ShopMyCloset",
       numTel: "06.72.24.54.29",
       lienSiteInternet: "www.shopmycloset.fr",
-      copyright: "2022 Shop My Closet - Tous droits reserves."
+      copyright: "2022 Shop My Closet - Tous droits reserves.",
     };
   },
 };
@@ -45,8 +47,9 @@ export default {
 <style scoped lang="scss">
 .fifthPage {
   width: 100%;
-  height: 500px;
+  height: auto;
   background-color: black;
+  padding-bottom: 30px;
 }
 hr {
   margin: 0 auto 30px;
@@ -69,27 +72,29 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5px;
-  margin-bottom: 60px;
+  margin-bottom: 120px;
+  margin-top: 30px;
 }
 .contact,
 .num,
 .instag {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 25px;
   padding: 5px;
 }
 .num {
   font-family: "SignPaint";
   font-size: 2em;
+  padding: 5px;
+  letter-spacing: 0.1rem;
 }
 .fa-instagram {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .web {
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.1rem;
-  font-size: 20px;
+  font-size: 25px;
 }
 span {
   margin-right: 10px;
@@ -100,53 +105,40 @@ a {
 }
 .blocCopyR {
   color: rgba(253, 253, 253, 0.645);
-  padding: 0 10px 0 10px;
+  padding: 0 10px 30px 10px;
+  font-size: 11px;
 }
-
-@media screen and (min-width: 700px) {
-  h2 {
-    font-size: 3.5em;
-    margin-bottom: 40px;
-  }
-  .contact,
-  .instag {
-    font-size: 25px;
-    line-height: 35px;
-  }
-
-  .web {
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.1rem;
-    font-size: 25px;
-  }
-}
-
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1025px) {
   .fifthPage {
-    height: 600px;
-  }
-  hr {
-    width: 30%;
-    border-top: 6px solid grey;
-    margin-bottom: 100px;
+    padding-bottom: 70px;
   }
   h2 {
-    font-size: 6em;
+    font-size: 100px;
+    margin: 0 0 20px;
+    padding: 100px 0 5px;
   }
   .blocContact {
-    line-height: 50px;
-    font-size: 2em;
+    margin-bottom: 170px;
+    margin-top: 30px;
   }
-  .fa-instagram,
-  .fa-copyright {
-    font-size: 1.1em;
+  .contact,
+  .num,
+  .instag {
+    margin-bottom: 30px;
+    font-size: 50px;
   }
   .num {
-    font-size: 1.3em;
+    font-size: 4em;
   }
+  .fa-instagram {
+    font-size: 3rem;
+  }
+  .web {
+    font-size: 50px;
+  }
+
   .blocCopyR {
-    margin-right: 4%;
-    margin-left: 4%;
+    font-size: 16px;
   }
 }
 </style>
