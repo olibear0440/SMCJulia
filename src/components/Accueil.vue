@@ -104,7 +104,6 @@ export default {
 }
 .blocImg {
   margin-bottom: 100px;
-  opacity: 1;
 }
 
 .mainBtn {
@@ -158,10 +157,7 @@ export default {
     width: 40%;
     height: auto;
   }
-  .blocImg {
-    opacity: 0;
-    animation: scaleImg 1.3s ease forwards;
-  }
+  
   @keyframes scaleImg {
     from {
       transform: scale(0);
@@ -175,7 +171,7 @@ export default {
     width: 25%;
     padding: 15px 25px 10px 25px;
     opacity: 0;
-    animation: scaleImg 1.3s 0.6s ease forwards;
+    animation: scaleImg 1.5s 0.2s  ease forwards;
   }
   .mainBtnTitle {
     text-decoration: none;
